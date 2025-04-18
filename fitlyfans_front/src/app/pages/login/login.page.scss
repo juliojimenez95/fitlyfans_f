@@ -1,0 +1,67 @@
+.login-background {
+  --background: #0c0c0c;
+  color: #ffffff;
+  //background-image: url('bg-dark-fitness.jpg'); // opcional
+  background-size: cover;
+  background-position: center;
+}
+
+.login-container {
+  padding-top: 80px;
+  text-align: center;
+}
+
+.login-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.login-subtitle {
+  font-size: 1rem;
+  color: #cfcfcf;
+  margin-bottom: 30px;
+}
+
+.login-input {
+  --background: #1b1b1b;
+  --color: #00ff88;
+  border: 1px solid #00ff88;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.login-input ion-icon {
+  color: #00ff88;
+}
+
+.login-button {
+  --background: #00ff88;
+  --background-hover: #00e07a;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.divider {
+  color: #aaa;
+  margin: 20px 0;
+}
+
+.google-button {
+  border-radius: 10px;
+  --border-color: #aaa;
+  color: #fff;
+}
+
+.signup-text {
+  color: #aaa;
+  margin-top: 20px;
+
+  a {
+    color: #00ff88;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "fitlyfans_f",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
