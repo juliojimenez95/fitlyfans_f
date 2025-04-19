@@ -1,0 +1,77 @@
+<ion-content class="ion-padding register-background">
+  <div class="register-container">
+    <h1 class="register-title">Crea tu Cuenta</h1>
+    <p class="register-subtitle">Regístrate para comenzar tu experiencia.</p>
+
+    <ion-item class="register-input">
+      <ion-icon name="person-outline" slot="start"></ion-icon>
+      <ion-input
+        [(ngModel)]="nombre"
+        placeholder="Ingresa tu nombre completo"
+        type="text"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item class="register-input">
+      <ion-icon name="mail-outline" slot="start"></ion-icon>
+      <ion-input
+        [(ngModel)]="correo"
+        placeholder="Ingresa tu correo electrónico"
+        type="email"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item class="register-input">
+      <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+      <ion-input
+        [(ngModel)]="contrasena"
+        placeholder="Crea una contraseña"
+        type="password"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item class="register-input">
+      <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+      <ion-input
+        [(ngModel)]="confirmarContrasena"
+        placeholder="Confirma tu contraseña"
+        type="password"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item class="register-input">
+      <ion-icon name="fitness-outline" slot="start"></ion-icon>
+      <ion-select [(ngModel)]="objetivo" placeholder="Selecciona tu objetivo">
+        <ion-select-option value="perder peso">Perder peso</ion-select-option>
+        <ion-select-option value="ganar musculo">Ganar músculo</ion-select-option>
+        <ion-select-option value="mantener">Mantener estado físico</ion-select-option>
+        <ion-select-option value="definir">Definir músculo</ion-select-option>
+        <ion-select-option value="mejorar resistencia">Mejorar resistencia</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item class="register-input">
+      <ion-icon name="pulse-outline" slot="start"></ion-icon>
+      <ion-select [(ngModel)]="nivel_fitness" placeholder="Selecciona tu nivel de fitness">
+        <ion-select-option value="principiante">Principiante</ion-select-option>
+        <ion-select-option value="intermedio">Intermedio</ion-select-option>
+        <ion-select-option value="avanzado">Avanzado</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button expand="block" class="register-button" (click)="registrar()">
+      Crear Cuenta
+    </ion-button>
+
+    <div class="divider">o</div>
+
+    <ion-button expand="block" fill="outline" class="google-button">
+      <ion-icon name="logo-google" slot="start"></ion-icon>
+      Registrarse con Google
+    </ion-button>
+
+    <p class="login-text">
+      ¿Ya tienes una cuenta? <a routerLink="/login">Inicia sesión</a>
+    </p>
+  </div>
+</ion-content>

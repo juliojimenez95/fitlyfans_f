@@ -1,0 +1,84 @@
+.register-background {
+    --background: #0c0c0c;
+    color: #ffffff;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .register-container {
+    padding-top: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .register-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .register-subtitle {
+    font-size: 1rem;
+    color: #cfcfcf;
+    margin-bottom: 30px;
+  }
+  
+  .register-input {
+    --background: #1b1b1b;
+    --color: #00ff88;
+    border: 1px solid #00ff88;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .register-input ion-icon {
+    color: #00ff88;
+  }
+  
+  /* Estilos específicos para los selectores */
+  ion-select {
+    --placeholder-color: #aaa;
+    --placeholder-opacity: 0.8;
+    color: #00ff88;
+    width: 100%;
+  }
+  
+  ion-select::part(icon) {
+    color: #00ff88;
+  }
+  
+  ion-select-option {
+    --background: #1b1b1b;
+    --color: #00ff88;
+  }
+  
+  .register-button {
+    --background: #00ff88;
+    --background-hover: #00e07a;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  
+  .divider {
+    color: #aaa;
+    margin: 20px 0;
+  }
+  
+  .google-button {
+    border-radius: 10px;
+    --border-color: #aaa;
+    color: #fff;
+  }
+  
+  .login-text {
+    color: #aaa;
+    margin-top: 20px;
+  
+    a {
+      color: #00ff88;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
