@@ -1,0 +1,19 @@
+.perfil-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .perfil-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .perfil-card {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+  

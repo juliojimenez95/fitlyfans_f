@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { HttpHeaders } from '@angular/common/http'; // Asegúrate de importar esto
+import { RouterLink } from '@angular/router';
 
 interface Entrenador {
   id: number;
@@ -24,6 +25,7 @@ interface ApiResponse {
   styleUrls: ['./home.page.scss'],
   imports: [
     CommonModule,
+    RouterLink,
     IonicModule // ✅ Suficiente para usar todos los componentes de Ionic
   ],
 })

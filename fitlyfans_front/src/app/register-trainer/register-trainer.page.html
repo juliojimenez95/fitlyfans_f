@@ -1,0 +1,75 @@
+<ion-content class="ion-padding register-background">
+  <div class="register-container">
+    <h1 class="register-title">Registro de Entrenador</h1>
+    <p class="register-subtitle">Crea tu cuenta como entrenador en Fitlyfans.</p>
+
+    <ion-item class="register-input">
+      <ion-icon name="person-outline" slot="start"></ion-icon>
+      <ion-input
+        [(ngModel)]="nombre"
+        placeholder="Nombre completo"
+        type="text"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item class="register-input">
+      <ion-icon name="mail-outline" slot="start"></ion-icon>
+      <ion-input
+        [(ngModel)]="correo"
+        placeholder="Correo electrónico"
+        type="email"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item class="register-input">
+      <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+      <ion-input
+        [(ngModel)]="contrasena"
+        placeholder="Contraseña"
+        type="password"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item class="register-input">
+      <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+      <ion-input
+        [(ngModel)]="confirmarContrasena"
+        placeholder="Confirmar contraseña"
+        type="password"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item class="register-input">
+      <ion-icon name="briefcase-outline" slot="start"></ion-icon>
+      <ion-input
+        [(ngModel)]="especialidad"
+        placeholder="Especialidad (ej. Entrenamiento funcional)"
+        type="text"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item class="register-input">
+      <ion-icon name="school-outline" slot="start"></ion-icon>
+      <ion-input
+        [(ngModel)]="certificaciones"
+        placeholder="Certificaciones (ej. NASM, ISSA)"
+        type="text"
+      ></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" class="register-button" (click)="registrar()">
+      Crear Cuenta como Entrenador
+    </ion-button>
+
+    <div class="divider">o</div>
+
+    <ion-button expand="block" fill="outline" class="google-button">
+      <ion-icon name="logo-google" slot="start"></ion-icon>
+      Registrarse con Google
+    </ion-button>
+
+    <p class="login-text">
+      ¿Ya tienes una cuenta? <a routerLink="/login">Inicia sesión</a>
+    </p>
+  </div>
+</ion-content>
