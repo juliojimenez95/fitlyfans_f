@@ -17,7 +17,8 @@ export const routes: Routes = [
     path: 'login',
     loadComponent: () =>
       import('./pages/login/login.page').then((m) => m.LoginPage),
-  },  {
+  },
+  {
     path: 'register',
     loadComponent: () => import('./pages/register/register.page').then( m => m.RegisterPage)
   },
@@ -28,6 +29,10 @@ export const routes: Routes = [
   {
     path: 'perfil-entrenador',
     loadComponent: () => import('./pages/perfil-entrenador/perfil-entrenador.page').then( m => m.PerfilEntrenadorPage)
+  },
+  {
+    path: 'explore-coaches',
+    loadComponent: () => import('./pages/explore-coaches/explore-coaches.page').then( m => m.ExploreCoachesPage)
   },
 
 ];

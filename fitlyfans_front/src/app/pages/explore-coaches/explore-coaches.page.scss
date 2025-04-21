@@ -1,0 +1,22 @@
+.background-custom {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .card-custom {
+    border: 1px solid #00ff88;
+    border-radius: 15px;
+    background-color: #121212;
+    color: #fff;
+  }
+  
+  ion-card-title,
+  ion-card-subtitle,
+  p {
+    color: #fff;
+  }
+  
+  ion-button {
+    --background: #00ff88;
+    --color: #000;
+  }
