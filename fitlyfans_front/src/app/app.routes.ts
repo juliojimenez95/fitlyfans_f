@@ -27,8 +27,9 @@ export const routes: Routes = [
     loadComponent: () => import('./register-trainer/register-trainer.page').then( m => m.RegisterTrainerPage)
   },
   {
-    path: 'perfil-entrenador',
-    loadComponent: () => import('./pages/perfil-entrenador/perfil-entrenador.page').then( m => m.PerfilEntrenadorPage)
+    path: 'perfil-entrenador/:id',
+    loadComponent: () =>
+      import('./pages/perfil-entrenador/perfil-entrenador.page').then(m => m.PerfilEntrenadorPage)
   },
   {
     path: 'explore-coaches',

@@ -1,22 +1,78 @@
 .background-custom {
-    background-color: #000;
-    color: #fff;
-  }
-  
-  .card-custom {
-    border: 1px solid #00ff88;
-    border-radius: 15px;
-    background-color: #121212;
-    color: #fff;
-  }
-  
-  ion-card-title,
-  ion-card-subtitle,
-  p {
-    color: #fff;
-  }
-  
-  ion-button {
-    --background: #00ff88;
-    --color: #000;
-  }
+  --background: #000;
+  color: #fff;
+  padding: 1rem;
+}
+
+.title-bold {
+  font-weight: bold;
+}
+
+.filtros {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.seccion-titulo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1rem 0 0.5rem;
+  color: #00ff88;
+}
+
+.card-trainer {
+  background-color: #121212;
+  border-radius: 15px;
+  border: 1px solid #00ff88;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.avatar {
+  width: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+  height: 140px;
+}
+
+.info {
+  margin-top: 0.5rem;
+}
+
+.nombre {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.especialidad {
+  color: #00ff88;
+  font-size: 0.9rem;
+}
+
+.estrella {
+  color: #ffd700;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+.rating {
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.card-sub, .card-sub-precio {
+  background-color: #121212;
+  border-radius: 15px;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.btn-ver-perfil {
+  margin: 0.5rem;
+  --background: #00ff88;
+  --color: #000;
+  border-radius: 10px;
+}
