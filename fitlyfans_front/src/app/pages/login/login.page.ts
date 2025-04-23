@@ -39,6 +39,7 @@ export class LoginPage {
       localStorage.setItem('userId', res.usuario.id.toString());
       localStorage.setItem('userType', res.usuario.tipo_usuario);
       localStorage.setItem('userName', res.usuario.nombre);
+      localStorage.setItem('tipo', res.usuario.tipo_usuario);
       
       const alert = await this.alertController.create({
         header: 'Éxito',
