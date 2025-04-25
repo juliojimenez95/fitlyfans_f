@@ -1,0 +1,194 @@
+:host {
+    --ion-color-success: #3ae374;
+    --exercise-border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  ion-content {
+    --background: #121212;
+  }
+  
+  ion-toolbar {
+    --background: #121212;
+    
+    &:last-child {
+      padding: 0 16px 16px;
+    }
+  }
+  
+  .main-container {
+    padding: 16px;
+  }
+  
+  // Video preview section
+  .video-preview-container {
+    margin-bottom: 24px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--exercise-border-color);
+    background: #1a1a1a;
+    
+    .video-preview {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+      
+      img {
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+      }
+      
+      .timer {
+        position: absolute;
+        right: 12px;
+        bottom: 12px;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+    }
+    
+    .video-actions {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 8px;
+      padding: 8px;
+      
+      .action-button {
+        --color: rgba(255, 255, 255, 0.8);
+        --background: #242424;
+        --border-radius: 8px;
+        height: 48px;
+        margin: 0;
+        
+        &.upload {
+          --background: #242424;
+        }
+        
+        ion-icon {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+  
+  // Form section
+  .exercise-form {
+    .exercise-input {
+      --background: #1a1a1a;
+      --color: white;
+      --padding-start: 16px;
+      --padding-end: 16px;
+      --padding-top: 12px;
+      --padding-bottom: 12px;
+      --border-radius: 8px;
+      --border-color: var(--exercise-border-color);
+      --border-style: solid;
+      --border-width: 1px;
+      margin-bottom: 16px;
+    }
+    
+    .form-section {
+      margin-bottom: 24px;
+      
+      .section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+        
+        h3 {
+          font-size: 16px;
+          font-weight: bold;
+          color: white;
+          margin: 0;
+        }
+        
+        .info-button {
+          --color: rgba(255, 255, 255, 0.7);
+          --padding-start: 0;
+          --padding-end: 0;
+          font-size: 14px;
+          font-weight: normal;
+          text-transform: none;
+          margin: 0;
+          
+          ion-icon {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    
+    .exercise-type-selector {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      
+      .type-button {
+        --background: #1a1a1a;
+        --color: rgba(255, 255, 255, 0.7);
+        --border-color: var(--exercise-border-color);
+        --border-style: solid;
+        --border-width: 1px;
+        --border-radius: 20px;
+        --padding-start: 16px;
+        --padding-end: 16px;
+        --box-shadow: none;
+        margin: 0;
+        height: 40px;
+        font-size: 14px;
+        
+        &.selected {
+          --background: transparent;
+          --border-color: var(--ion-color-success);
+          --color: var(--ion-color-success);
+        }
+      }
+    }
+    
+    .muscles-container {
+      display: flex;
+      align-items: flex-start;
+      
+      .difficulty-rating {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding-top: 8px;
+        
+        ion-icon {
+          font-size: 24px;
+          color: rgba(255, 255, 255, 0.3);
+          
+          &.active {
+            color: var(--ion-color-success);
+          }
+        }
+      }
+      
+      .muscle-map {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        
+        .active-muscles {
+          height: 250px;
+          filter: drop-shadow(0 0 8px var(--ion-color-success));
+        }
+      }
+    }
+  }
+  
+  ion-footer {
+    ion-button {
+      --border-radius: 24px;
+      height: 48px;
+      font-size: 16px;
+    }
+  }

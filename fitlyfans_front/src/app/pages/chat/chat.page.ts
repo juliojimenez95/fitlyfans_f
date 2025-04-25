@@ -33,18 +33,18 @@ export class ChatPage implements OnInit {
   cargarMensajes() {
     const token = localStorage.getItem('token');
     const headers = new HttpHeaders({
-      Authorization: `Bearer ${token}`
+      Authorization: `Bearer ${token}`,
     });
 
     const url = `http://127.0.0.1:5000/api/mensaje/entrenador/${this.entrenador_id}/suscriptor/${this.suscriptor_id}`;
-    this.http.get<any[]>(url, { headers }).subscribe({
+    this.http.get<any>(url, { headers }).subscribe({
       next: (res) => {
-        this.mensajes = res.map(mensaje => ({
+        this.mensajes = res.mensajes.map((mensaje: any) => ({
           ...mensaje,
-          autor: mensaje.emisor === 1 ? 'yo' : 'entrenador'
+          autor: mensaje.emisor === 1 ? 'yo' : 'entrenador',
         }));
       },
-      error: (err) => console.error('Error al cargar mensajes', err)
+      error: (err) => console.error('Error al cargar mensajes', err),
     });
   }
 
@@ -53,23 +53,22 @@ export class ChatPage implements OnInit {
 
     const token = localStorage.getItem('token');
     const headers = new HttpHeaders({
-      Authorization: `Bearer ${token}`
+      Authorization: `Bearer ${token}`,
     });
 
     const payload = {
       suscriptor_id: Number(this.suscriptor_id),
       entrenador_id: Number(this.entrenador_id),
       contenido: this.nuevoMensaje,
-      emisor: 1 // El suscriptor envía
+      emisor: 1, // El suscriptor envía
     };
-    
-    console.log(payload);
+
     this.http.post('http://127.0.0.1:5000/api/mensaje', payload, { headers }).subscribe({
       next: () => {
         this.nuevoMensaje = '';
         this.cargarMensajes();
       },
-      error: (err) => console.error('Error al enviar mensaje', err)
+      error: (err) => console.error('Error al enviar mensaje', err),
     });
   }
 }

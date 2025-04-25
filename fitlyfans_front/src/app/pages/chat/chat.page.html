@@ -6,12 +6,18 @@
 
 <ion-content class="chat-content">
   <ion-list>
-    <ion-item *ngFor="let mensaje of mensajes">
-      <ion-label>
-        <h3>{{ mensaje.autor === 'yo' ? 'Tú' : 'Entrenador' }}</h3>
-        <p>{{ mensaje.contenido }}</p>
-      </ion-label>
-    </ion-item>
+    <!-- Mensajes -->
+    <div
+      *ngFor="let mensaje of mensajes"
+      [class.emisor]="mensaje.autor === 'yo'"
+      [class.receptor]="mensaje.autor !== 'yo'"
+      class="mensaje-burbuja"
+    >
+      <p>{{ mensaje.contenido }}</p>
+      <span class="nombre-emisor">
+        {{ mensaje.nombre_emisor }} - {{ mensaje.fecha_envio | date:'shortTime' }}
+      </span>
+    </div>
   </ion-list>
 </ion-content>
 

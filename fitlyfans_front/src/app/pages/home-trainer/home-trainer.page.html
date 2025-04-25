@@ -1,0 +1,65 @@
+<ion-content [fullscreen]="true" class="ion-padding fitly-content">
+  <div class="header">
+    <div class="logo">
+      <ion-icon name="barbell-outline" color="success"></ion-icon>
+      <h1>FitlyFans</h1>
+    </div>
+    <h2 class="tagline">Entrena con impacto</h2>
+  </div>
+
+  <div class="categories-grid">
+    <div
+      class="category-card"
+      *ngFor="let category of workoutCategories; let i = index"
+      [ngClass]="{ 'large-card': i < 2, 'small-card': i >= 2 }"
+    >
+      <div class="card-content" [style.background-image]="'url(' + category.image + ')'">
+        <div class="overlay" [style.background]="category.color"></div>
+        <div class="card-title">{{ category.title }}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">
+    TU OBJETIVO: MOTIVAR A TU COMUNIDAD
+  </div>
+
+  <div class="categories-grid action-grid">
+    <div class="category-card action-card">
+      <div class="card-content action-content">
+        <div class="overlay" style="background: linear-gradient(135deg, #4CAF50, #2E7D32)"></div>
+        <div class="card-icon">
+          <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+        </div>
+        <div class="card-title">Responder mensajes</div>
+      </div>
+    </div>
+    <div class="category-card action-card" routerLink="/crear-rutina">
+      <div class="card-content action-content">
+        <div class="overlay" style="background: linear-gradient(135deg, #3F51B5, #1A237E)"></div>
+        <div class="card-icon">
+          <ion-icon name="create-outline"></ion-icon>
+        </div>
+        <div class="card-title">Crear rutina</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="recommended-section">
+    <h3>TUS RUTINAS DESTACADAS</h3>
+    <div class="recommended-grid">
+      <div class="recommended-card" *ngFor="let workout of recommendedWorkouts">
+        <div class="card-content" [style.background-image]="'url(' + workout.image + ')'">
+          <div class="overlay" [style.background]="workout.color"></div>
+          <div class="card-info">
+            <div class="card-title">{{ workout.title }}</div>
+            <div class="card-metric" *ngIf="workout.duration">{{ workout.duration }}</div>
+            <div class="intensity-meter" *ngIf="workout.intensity">
+              <div class="intensity-value">{{ workout.intensity }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

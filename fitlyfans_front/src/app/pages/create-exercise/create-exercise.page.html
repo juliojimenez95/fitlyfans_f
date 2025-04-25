@@ -1,0 +1,94 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Crear Ejercicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  <div class="main-container">
+    <!-- Video preview section -->
+    <div class="video-preview-container">
+      <div class="video-preview">
+        <img src="assets/images/squat-exercise.jpg" alt="Exercise preview">
+        <div class="timer">00:30</div>
+      </div>
+      
+      <div class="video-actions">
+        <ion-button fill="clear" class="action-button">
+          <ion-icon name="videocam-outline" slot="start"></ion-icon>
+          Grabar
+        </ion-button>
+        
+        <ion-button fill="clear" class="action-button upload">
+          <ion-icon name="document-outline" slot="start"></ion-icon>
+          Arrastra un video aquí
+        </ion-button>
+      </div>
+    </div>
+    
+    <!-- Exercise details form -->
+    <div class="exercise-form">
+      <ion-input 
+        placeholder="Nombre del ejercicio" 
+        class="exercise-input"
+      ></ion-input>
+      
+      <ion-textarea
+        placeholder="Descripción
+Descripción técnica..."
+        class="exercise-input"
+        rows="3"
+      ></ion-textarea>
+      
+      <!-- Exercise type section -->
+      <div class="form-section">
+        <div class="section-header">
+          <h3>Tipo de ejercicio</h3>
+          <ion-button fill="clear" class="info-button">
+            Fuerza
+            <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+          </ion-button>
+        </div>
+        
+        <div class="exercise-type-selector">
+          <ion-button class="type-button selected">Fuerza</ion-button>
+          <ion-button class="type-button">Cardio</ion-button>
+          <ion-button class="type-button">Flexibilidad</ion-button>
+        </div>
+      </div>
+      
+      <!-- Muscles involved section -->
+      <div class="form-section">
+        <div class="section-header">
+          <h3>Músculos involucrados</h3>
+        </div>
+        
+        <div class="muscles-container">
+          <div class="difficulty-rating">
+            <ion-icon name="star" class="active"></ion-icon>
+            <ion-icon name="star" class="active"></ion-icon>
+            <ion-icon name="star" class="active"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+          </div>
+          
+          <div class="muscle-map">
+            <img src="assets/images/muscle-map.svg" alt="Muscle map" class="active-muscles">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar color="dark">
+    <ion-button expand="block" color="success">
+      Guardar Ejercicio
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>
