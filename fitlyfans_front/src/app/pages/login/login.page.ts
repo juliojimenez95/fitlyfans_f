@@ -47,9 +47,17 @@ export class LoginPage {
         buttons: ['OK'],
       });
       await alert.present();
-      
-      // Redirigir a la página principal o donde corresponda
-      this.router.navigate(['/home']);
+
+      if (res.usuario.tipo_usuario == 'suscriptor') {
+        // Redirigir a la página principal o donde corresponda
+        this.router.navigate(['/home']);
+        
+      } if(res.usuario.tipo_usuario == 'entrenador') {
+
+        // Redirigir a la página principal o donde corresponda
+        this.router.navigate(['/home-trainer']);
+        
+      }
     },
     error: async (err) => {
       console.error('Error al iniciar sesión:', err);
