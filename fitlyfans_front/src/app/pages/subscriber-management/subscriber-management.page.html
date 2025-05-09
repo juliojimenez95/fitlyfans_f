@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title class="title-bold">SUBSCRIBER MANAGEMENT</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="search-outline"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="filter-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background-custom">
+  <!-- Estadísticas principales -->
+  <ion-card class="stats-card">
+    <ion-card-content>
+      <div class="stats-title">ACTIVE SUBSCRIBERS</div>
+      <div class="stats-value">{{ totalSubscribers }}</div>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Tarjetas de métricas -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="4">
+        <ion-card class="metric-card">
+          <ion-card-content>
+            <div class="metric-label">Retention rate</div>
+            <div class="metric-value">{{ retentionRate }}%</div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="12" size-md="4">
+        <ion-card class="metric-card">
+          <ion-card-content>
+            <div class="metric-label">Monthly revenue</div>
+            <div class="metric-value">${{ monthlyRevenue }}</div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="12" size-md="4">
+        <ion-card class="metric-card">
+          <ion-card-content>
+            <div class="metric-label">Popular routines</div>
+            <div class="popular-routines">
+              <div *ngFor="let routine of popularRoutines; let i = index" class="routine-item">
+                <span class="routine-rank">#{{ i+1 }}</span>
+                <span class="routine-name">{{ routine.name }}</span>
+                <span class="routine-rank">#{{ i+1 }}</span>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Lista de suscriptores -->
+  <div *ngFor="let subscriber of subscribers">
+    <ion-card class="subscriber-card">
+      <ion-card-content>
+        <div class="subscriber-header">
+          <ion-avatar class="subscriber-avatar">
+            <img [src]="subscriber.avatar || 'assets/avatar-default.jpg'" alt="Subscriber">
+          </ion-avatar>
+          <div class="subscriber-info">
+            <div class="subscriber-name">{{ subscriber.name }}</div>
+            <div class="subscriber-date">{{ subscriber.date }}</div>
+          </div>
+          <div class="subscriber-plan" [ngClass]="{'premium': subscriber.plan === 'Premium', 'basic': subscriber.plan === 'Basic'}">
+            {{ subscriber.plan }}
+          </div>
+        </div>
+        <div class="progress-container">
+          <div class="progress-bar" [style.width]="subscriber.progress + '%'"></div>
+        </div>
+        <div class="progress-text">
+          <ng-container *ngIf="subscriber.progress === 100">
+            {{ subscriber.progress }}% completed
+          </ng-container>
+          <ng-container *ngIf="subscriber.progress !== 100">
+            {{ subscriber.progress }}% to next goal
+          </ng-container>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

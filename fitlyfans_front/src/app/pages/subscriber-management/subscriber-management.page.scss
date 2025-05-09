@@ -1,0 +1,144 @@
+.background-custom {
+    --background: #000;
+    color: #fff;
+    padding: 1rem;
+  }
+  
+  .title-bold {
+    font-weight: bold;
+  }
+  
+  // Estilos para la tarjeta de estadísticas
+  .stats-card {
+    background-color: #121212;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    border: 1px solid #00ff88;
+  }
+  
+  .stats-title {
+    color: #00ff88;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .stats-value {
+    color: #00ff88;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  // Estilos para las tarjetas de métricas
+  .metric-card {
+    background-color: #121212;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    height: 100%;
+    border: 1px solid #333;
+  }
+  
+  .metric-label {
+    color: #a090e9;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .metric-value {
+    color: #00ff88;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  // Estilos para rutinas populares
+  .popular-routines {
+    margin-top: 0.5rem;
+  }
+  
+  .routine-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  
+  .routine-rank {
+    color: #a090e9;
+  }
+  
+  .routine-name {
+    color: #00ff88;
+    font-weight: bold;
+  }
+  
+  // Estilos para tarjetas de suscriptores
+  .subscriber-card {
+    background-color: #121212;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+  }
+  
+  .subscriber-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .subscriber-avatar {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+  }
+  
+  .subscriber-info {
+    flex-grow: 1;
+  }
+  
+  .subscriber-name {
+    color: #00ff88;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .subscriber-date {
+    color: #888;
+    font-size: 0.9rem;
+  }
+  
+  .subscriber-plan {
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  
+  .premium {
+    background-color: rgba(0, 255, 136, 0.2);
+    color: #00ff88;
+  }
+  
+  .basic {
+    background-color: rgba(0, 255, 136, 0.1);
+    color: #00ff88;
+  }
+  
+  // Estilos para la barra de progreso
+  .progress-container {
+    height: 10px;
+    background-color: #333;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #00ff88;
+    border-radius: 5px;
+  }
+  
+  .progress-text {
+    text-align: right;
+    color: #00ff88;
+    font-size: 0.9rem;
+  }

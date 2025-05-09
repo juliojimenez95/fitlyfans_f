@@ -1,3 +1,4 @@
+<!-- create-exercise.page.html -->
 <ion-header class="ion-no-border">
   <ion-toolbar color="dark">
     <ion-buttons slot="start">
@@ -14,19 +15,21 @@
     <!-- Video preview section -->
     <div class="video-preview-container">
       <div class="video-preview">
-        <img src="assets/images/squat-exercise.jpg" alt="Exercise preview">
-        <div class="timer">00:30</div>
+        <!-- Mostrar video preview si está disponible, de lo contrario mostrar imagen placeholder -->
+        <ng-container *ngIf="videoUrl; else placeholderImage">
+          <video #videoPlayer [src]="videoUrl" controls></video>
+          <div class="timer">{{videoDuration}}</div>
+        </ng-container>
+        <ng-template #placeholderImage>
+          <img src="assets/images/squat-exercise.jpg" alt="Exercise preview">
+          <div class="timer">00:00</div>
+        </ng-template>
       </div>
       
       <div class="video-actions">
-        <ion-button fill="clear" class="action-button">
+        <ion-button fill="clear" class="action-button" (click)="presentVideoOptions()" [disabled]="isLoading">
           <ion-icon name="videocam-outline" slot="start"></ion-icon>
-          Grabar
-        </ion-button>
-        
-        <ion-button fill="clear" class="action-button upload">
-          <ion-icon name="document-outline" slot="start"></ion-icon>
-          Arrastra un video aquí
+          {{ videoUrl ? 'Cambiar video' : 'Añadir video' }}
         </ion-button>
       </div>
     </div>
@@ -36,6 +39,7 @@
       <ion-input 
         placeholder="Nombre del ejercicio" 
         class="exercise-input"
+        [(ngModel)]="exerciseName"
       ></ion-input>
       
       <ion-textarea
@@ -43,6 +47,7 @@
 Descripción técnica..."
         class="exercise-input"
         rows="3"
+        [(ngModel)]="exerciseDescription"
       ></ion-textarea>
       
       <!-- Exercise type section -->
@@ -50,15 +55,20 @@ Descripción técnica..."
         <div class="section-header">
           <h3>Tipo de ejercicio</h3>
           <ion-button fill="clear" class="info-button">
-            Fuerza
+            {{ getSelectedExerciseTypeName() }}
             <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
           </ion-button>
         </div>
         
         <div class="exercise-type-selector">
-          <ion-button class="type-button selected">Fuerza</ion-button>
-          <ion-button class="type-button">Cardio</ion-button>
-          <ion-button class="type-button">Flexibilidad</ion-button>
+          <ion-button 
+            *ngFor="let type of exerciseTypes"
+            class="type-button" 
+            [class.selected]="isExerciseTypeSelected(type)"
+            (click)="selectExerciseType(type.id)"
+          >
+            {{ type.name }}
+          </ion-button>
         </div>
       </div>
       
@@ -67,6 +77,12 @@ Descripción técnica..."
         <div class="section-header">
           <h3>Músculos involucrados</h3>
         </div>
+        
+        <ion-input 
+          placeholder="Grupo muscular principal" 
+          class="exercise-input"
+          [(ngModel)]="muscleGroup"
+        ></ion-input>
         
         <div class="muscles-container">
           <div class="difficulty-rating">
@@ -83,11 +99,14 @@ Descripción técnica..."
       </div>
     </div>
   </div>
+  
+  <!-- Loading spinner -->
+  <ion-spinner *ngIf="isLoading" class="loading-spinner"></ion-spinner>
 </ion-content>
 
 <ion-footer class="ion-no-border">
   <ion-toolbar color="dark">
-    <ion-button expand="block" color="success">
+    <ion-button expand="block" color="success" (click)="saveExercise()" [disabled]="isLoading">
       Guardar Ejercicio
     </ion-button>
   </ion-toolbar>

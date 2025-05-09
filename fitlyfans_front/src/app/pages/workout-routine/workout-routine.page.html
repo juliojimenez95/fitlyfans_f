@@ -7,7 +7,7 @@
           <ion-icon name="arrow-back-outline"></ion-icon>
         </ion-button>
       </ion-buttons>
-      <ion-title>Create Routine</ion-title>
+      <ion-title>Crear Rutina</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -17,59 +17,59 @@
       <div class="section">
         <div class="section-header">
           <span class="section-number">1</span>
-          <h3>Routine Details</h3>
+          <h3>Detalles de la Rutina</h3>
         </div>
 
         <div class="form-group">
-          <ion-label>Name</ion-label>
-          <ion-input [(ngModel)]="routineName" placeholder="Full Body Blast"></ion-input>
+          <ion-label>Nombre</ion-label>
+          <ion-input [(ngModel)]="routineName" placeholder="Explosión de Cuerpo Completo"></ion-input>
         </div>
 
         <div class="form-group">
           <ion-textarea
             [(ngModel)]="routineDescription"
-            placeholder="High intensity workout targeting all major muscle groups"
+            placeholder="Entrenamiento de alta intensidad que trabaja todos los grupos musculares principales"
             rows="2"
           ></ion-textarea>
         </div>
 
         <div class="form-group">
-          <ion-label>Difficulty</ion-label>
+          <ion-label>Dificultad</ion-label>
           <div class="difficulty-selector">
             <ion-segment [(ngModel)]="difficulty" color="success">
               <ion-segment-button value="beginner">
-                <ion-label>Beginner</ion-label>
+                <ion-label>Principiante</ion-label>
               </ion-segment-button>
               <ion-segment-button value="intermediate">
-                <ion-label>Intermediate</ion-label>
+                <ion-label>Intermedio</ion-label>
               </ion-segment-button>
               <ion-segment-button value="advanced">
-                <ion-label>Advanced</ion-label>
+                <ion-label>Avanzado</ion-label>
               </ion-segment-button>
             </ion-segment>
           </div>
         </div>
 
         <ion-item color="dark" detail lines="full" button>
-          <ion-label>Category</ion-label>
+          <ion-label>Categoría</ion-label>
           <ion-icon name="chevron-forward" slot="end"></ion-icon>
         </ion-item>
       </div>
 
       <!-- Sección 2: Añadir ejercicios -->
-      <div class="section">
-        <div class="section-header">
+      <div class="section"  >
+        <div class="section-header" >
           <span class="section-number">2</span>
-          <h3>Add Exercises</h3>
+          <h3>Agregar Ejercicios</h3>
         </div>
 
-        <div class="search-box">
-          <ion-searchbar placeholder="Search exercises" color="dark"></ion-searchbar>
+        <div class="search-box" >
+          <ion-searchbar placeholder="Buscar ejercicios" color="dark"></ion-searchbar>
         </div>
 
-        <ion-item color="dark" lines="full" button class="create-new">
+        <ion-item color="dark" lines="full" button class="create-new" routerLink="/create-exercise">
           <ion-icon name="add" slot="start"></ion-icon>
-          <ion-label>Create New Exercise</ion-label>
+          <ion-label>Crear Nuevo Ejercicio</ion-label>
         </ion-item>
 
         <div class="exercise-list">
@@ -78,8 +78,8 @@
               <img src="assets/images/squat.jpg" alt="Squat">
             </ion-thumbnail>
             <ion-label>
-              <h4>Squat</h4>
-              <p>45 sec</p>
+              <h4>Sentadilla</h4>
+              <p>45 seg</p>
             </ion-label>
           </ion-item>
 
@@ -88,7 +88,7 @@
               <img src="assets/images/pushup.jpg" alt="Push-Up">
             </ion-thumbnail>
             <ion-label>
-              <h4>Push-Up</h4>
+              <h4>Flexiones</h4>
               <p>3 × 10</p>
             </ion-label>
           </ion-item>
@@ -99,7 +99,7 @@
       <div class="section">
         <div class="section-header">
           <span class="section-number">3</span>
-          <h3>Preview</h3>
+          <h3>Vista Previa</h3>
         </div>
       </div>
 
@@ -109,7 +109,7 @@
         class="next-button"
         (click)="showRoutineDetails = true"
       >
-        Next
+        Siguiente
       </ion-button>
     </div>
   </ion-content>
@@ -124,7 +124,7 @@
           <ion-icon name="arrow-back-outline"></ion-icon>
         </ion-button>
       </ion-buttons>
-      <ion-title>Full Body Blast</ion-title>
+      <ion-title>Explosión de Cuerpo Completo</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -152,7 +152,7 @@
             [title]="'75%'"
             [titleColor]="'#ffffff'"
             [titleFontSize]="'30'"
-            [subtitle]="'Calorcal'"
+            [subtitle]="'Calorías'"
             [subtitleColor]="'#aaaaaa'"
             [subtitleFontSize]="'14'"
             [animation]="true"
@@ -173,14 +173,14 @@
             <div class="bar" [style.height.%]="day"></div>
           </div>
         </div>
-        <div class="progress-label">Weekly progress</div>
+        <div class="progress-label">Progreso Semanal</div>
       </div>
 
       <!-- Detalles de tiempo -->
       <div class="time-details">
         <div class="detail">
           <span class="value">4</span>
-          <span class="unit">45 sec</span>
+          <span class="unit">45 seg</span>
         </div>
         <div class="detail">
           <span class="value">3 × 10</span>
@@ -189,7 +189,7 @@
 
       <!-- Lista de ejercicios -->
       <div class="section">
-        <h3>Excercuises</h3>
+        <h3>Ejercicios</h3>
 
         <div class="exercise-list detailed">
           <ion-item color="dark" lines="full" class="exercise-item">
@@ -208,10 +208,10 @@
               <img src="assets/images/squat.jpg" alt="Squat">
             </ion-thumbnail>
             <ion-label>
-              <h4>Squat</h4>
-              <p>45 sec</p>
+              <h4>Sentadilla</h4>
+              <p>45 seg</p>
             </ion-label>
-            <div slot="end" class="duration">45 sec</div>
+            <div slot="end" class="duration">45 seg</div>
           </ion-item>
 
           <ion-item color="dark" lines="full" class="exercise-item">
@@ -219,7 +219,7 @@
               <img src="assets/images/plank.jpg" alt="Plank">
             </ion-thumbnail>
             <ion-label>
-              <h4>Plank</h4>
+              <h4>Plancha</h4>
               <p>1 min</p>
             </ion-label>
             <div slot="end" class="duration">1 min</div>
@@ -229,10 +229,10 @@
 
       <!-- Video de muestra -->
       <div class="progress-section">
-        <h3>Progress</h3>
+        <h3>Progreso</h3>
         
         <div class="video-container">
-          <img src="assets/images/workout-video.jpg" alt="Workout in progress">
+          <img src="assets/images/workout-video.jpg" alt="Entrenamiento en progreso">
           <div class="video-overlay">
             <div class="video-time">
               <span>00:12</span>
@@ -246,18 +246,18 @@
           <div class="achievement">
             <ion-icon name="trophy" color="warning"></ion-icon>
             <div class="achievement-text">
-              <span>7-Day</span>
-              <span>Streak</span>
+              <span>Racha de</span>
+              <span>7 Días</span>
             </div>
           </div>
 
           <div class="achievement">
             <ion-icon name="ribbon" color="primary"></ion-icon>
-            <span>Achievements</span>
+            <span>Logros</span>
           </div>
 
           <ion-button color="medium" fill="clear" class="share-button">
-            Share progress
+            Compartir progreso
           </ion-button>
         </div>
       </div>

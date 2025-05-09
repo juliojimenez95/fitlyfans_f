@@ -1,11 +1,12 @@
 import { Routes } from '@angular/router';
 import { authGuard } from './guards/auth.guard'; // Ajusta la ruta según donde hayas creado el archivo
-
+import { loginGuard } from './guards/auth.guard';
 export const routes: Routes = [
   {
     path: '',
     loadComponent: () =>
       import('./pages/login/login.page').then((m) => m.LoginPage),
+    canActivate: [loginGuard]
   },
   {
     path: 'home',
@@ -17,6 +18,7 @@ export const routes: Routes = [
     path: 'login',
     loadComponent: () =>
       import('./pages/login/login.page').then((m) => m.LoginPage),
+    canActivate: [loginGuard]
   },
   {
     path: 'register',
@@ -42,13 +44,18 @@ export const routes: Routes = [
   {
     path: 'home-trainer',
     loadComponent: () => import('./pages/home-trainer/home-trainer.page').then( m => m.HomeTrainerPage)
-  },  {
+  },
+  {
     path: 'workout-routine',
     loadComponent: () => import('./pages/workout-routine/workout-routine.page').then( m => m.WorkoutRoutinePage)
   },
   {
     path: 'create-exercise',
     loadComponent: () => import('./pages/create-exercise/create-exercise.page').then( m => m.CreateExercisePage)
+  },
+  {
+    path: 'subscriber-management',
+    loadComponent: () => import('./pages/subscriber-management/subscriber-management.page').then( m => m.SubscriberManagementPage)
   },
 
 

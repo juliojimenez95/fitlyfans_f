@@ -3,6 +3,7 @@ import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-workout-routine',
@@ -13,7 +14,8 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     IonicModule,
     CommonModule,
     FormsModule,
-    NgCircleProgressModule
+    NgCircleProgressModule, 
+    RouterLink
   ]
 })
 export class WorkoutRoutinePage implements OnInit {
