@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { checkmarkCircle, videocam } from 'ionicons/icons';
 import { RouterModule } from '@angular/router';
 
@@ -26,7 +26,11 @@ export class PerfilEntrenadorPage {
   id_suscriptor: string = '';   // ID del suscriptor (usuario logueado)
   mostrarChat: boolean = false;
 
-  constructor(private http: HttpClient, private route: ActivatedRoute) {}
+  constructor(
+    private http: HttpClient, 
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.id_seguido = this.route.snapshot.paramMap.get('id') || '';
@@ -46,6 +50,17 @@ export class PerfilEntrenadorPage {
         console.error('Error al cargar el perfil del entrenador', err);
       }
     });
+  }
+
+  iniciarProcesoPago() {
+    // Guardar datos temporales de la suscripción para usarlos después del pago
+    localStorage.setItem('suscripcionPendiente', JSON.stringify({
+      id_seguidor: this.id_suscriptor,
+      id_seguido: this.id_seguido
+    }));
+    
+    // Dirigir al usuario a la página de pago
+    this.router.navigate(['/payment']);
   }
 
   suscribirse() {

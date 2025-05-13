@@ -48,7 +48,7 @@
     <ion-card-content>
       <ion-icon [name]="videocam"></ion-icon> Evento: Cardio Express
       <p>Sábados 10 AM</p>
-      <ion-button expand="block" color="success" (click)="suscribirse()">Suscribirse</ion-button>
+      <ion-button *ngIf="!mostrarChat" expand="block" color="success" (click)="iniciarProcesoPago()">Suscribirse</ion-button>
       <ion-button *ngIf="mostrarChat" expand="block" color="primary"
         [routerLink]="['/chat', id_seguido, id_suscriptor]">
         Chat
