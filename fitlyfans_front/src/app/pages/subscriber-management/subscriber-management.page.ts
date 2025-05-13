@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { RouterLink } from '@angular/router';
+
 
 interface Subscriber {
   id: number;
@@ -34,7 +34,6 @@ interface ApiResponse {
   styleUrls: ['./subscriber-management.page.scss'],
   imports: [
     CommonModule,
-    RouterLink,
     IonicModule
   ],
 })

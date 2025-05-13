@@ -4,44 +4,40 @@
 }
 
 .payment-container {
-  padding-top: 40px;
+  margin-top: 30px;
   text-align: center;
 }
 
-.lock-icon {
-  font-size: 48px;
-  color: #00ff88;
-  margin-bottom: 10px;
-}
-
 .payment-title {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #00ff88;
   margin-bottom: 20px;
 }
 
-.payment-box {
-  background-color: #1b1b1b;
-  border-radius: 10px;
-  padding: 15px;
-  margin-bottom: 20px;
+.lock-icon {
+  font-size: 3rem;
+  color: #00ff88;
+  margin-bottom: 10px;
 }
 
 .payment-item {
-  --background: transparent;
+  --background: #1b1b1b;
   --color: #00ff88;
-  border: none;
-  margin-bottom: 10px;
+  border: 1px solid #00ff88;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  color: #00ff88;
 }
 
 .payment-item ion-icon {
   color: #00ff88;
 }
 
-.payment-button {
+.confirm-button {
   --background: #00ff88;
   color: #000;
   font-weight: bold;
-  border-radius: 12px;
+  border-radius: 10px;
+  margin-top: 20px;
 }
