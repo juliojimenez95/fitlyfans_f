@@ -10,8 +10,8 @@
   <div class="categories-grid">
     <div class="category-card" *ngFor="let category of workoutCategories; let i = index" [ngClass]="{'large-card': i < 2, 'small-card': i >= 2}">
       <div class="card-content" [style.background-image]="'url(' + category.image + ')'">
-        <div class="overlay" [style.background]="category.color"></div>
-        <div class="card-title">{{ category.title }}</div>
+        <!-- <div class="overlay" [style.background]="category.color"></div> -->
+        <!-- <div class="card-title">{{ category.title }}</div> -->
       </div>
     </div>
   </div>
@@ -46,7 +46,7 @@
     <div class="recommended-grid">
       <div class="recommended-card" *ngFor="let workout of recommendedWorkouts">
         <div class="card-content" [style.background-image]="'url(' + workout.image + ')'">
-          <div class="overlay" [style.background]="workout.color"></div>
+          <!-- <div class="overlay" [style.background]="workout.color"></div> -->
           <div class="card-info">
             <div class="card-title">{{ workout.title }}</div>
             <div class="card-metric" *ngIf="workout.duration">{{ workout.duration }}</div>

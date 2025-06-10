@@ -14,22 +14,22 @@ export class HomePage {
   workoutCategories = [
     {
       title: "Energía Matutina",
-      image: "assets/images/energia-matutina.jpg",
+      image: "assets/images/energia-matutina.jpeg",
       color: "linear-gradient(135deg, #4CAF50, #2E7D32)",
     },
     {
       title: "Relajación Nocturna",
-      image: "assets/images/relajacion-nocturna.jpg",
+      image: "assets/images/relajacion-nocturna.png",
       color: "linear-gradient(135deg, #3F51B5, #1A237E)",
     },
     {
       title: "Full Body Intenso",
-      image: "assets/images/full-body.jpg",
+      image: "assets/images/full-body.jpeg",
       color: "linear-gradient(135deg, #212121, #000000)",
     },
     {
       title: "Brazos y Espalda",
-      image: "assets/images/brazos-espalda.jpg",
+      image: "assets/images/brazos-espalda.jpeg",
       color: "linear-gradient(135deg, #212121, #000000)",
     },
   ]
@@ -37,14 +37,14 @@ export class HomePage {
   recommendedWorkouts = [
     {
       title: "Power HIIT",
-      duration: "5 h",
-      image: "assets/images/power-hiit.jpg",
+      duration: "1 h",
+      image: "assets/images/power-hiit.png",
       color: "linear-gradient(135deg, #212121, #000000)",
     },
     {
       title: "10 reps",
-      intensity: "8/10",
-      image: "assets/images/reps.jpg",
+      intensity: "Intermedio",
+      image: "assets/images/Piernas_Acero.png",
       color: "linear-gradient(135deg, #212121, #000000)",
     },
   ]
